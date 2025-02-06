@@ -1,3 +1,7 @@
+'''
+Given a string s1, write a program to return the sum and average of the digits that appear in the string, ignoring all other characters.
+'''
+
 print("Enter a string: ")
 
 s1 = input()

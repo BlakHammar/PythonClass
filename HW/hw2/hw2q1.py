@@ -1,3 +1,7 @@
+'''
+Write a program to count the total number of alphabetic characters and total number of numeric characters in a given string input.
+'''
+
 print("Enter a string: ")
 
 s = input()
