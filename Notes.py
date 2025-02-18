@@ -193,4 +193,99 @@ print(aset>bset, aset<bset) #superset, subset
 frozenset(aset) # makes a set inmutable
 
 
+#shallow vs deep copy
+
+val = 10 
+
+new = val  new is just pointing to same memory as val
+
+mylist = [10, 20, 30, 40]
+
+newlist = mylist
+
+print(mylist)
+print(newlist)
+
+mylist.append(5)
+
+print(mylist)
+print(newlist)
+                    // they should print the same thing
+
+import copy  //for shallow & deep copy
+
+newlist = copy.copy(mylist) //shallow copy. altough with nested list it will only created a new outer list
+                            it will still point to the same memory for the innerlist
+
+newlist= copy.deepcopy(mylist) //who need list in memory.
+
+
+
+#functions
+
+arg in functions are pass by assignments not reference or value
+
+when passing in mutable object is works like reference
+when passing inmutable is works like value
+
+
+#docstrings
+
+are strings that desribes what a functions does
+
+#doctest
+try the functions, put output in docstrings
+ to run doctest:
+    py -m doctect -v filename
+
+    
+returning multiple values returns it in a tuple
+
+def get_connection_details():
+    return "www.example.com", 22
+
+address, port = get_connection_details()
+
+#types of arguments:
+    -position arguments
+
+    -default arguments
+        def paint(color="blue", brush="flat"):
+            print(f"paint with {color} using {brush} brush")
+        
+        paint("red") 
+        paint( brush = "green")  
+
+        #cautions with mutable default arguments. set mutable to none instead of empty. 
+
+    -keyword arguments
+        def rect_area(length, width)
+            return length * width
+        
+        print(rect_area(width=5, length =6))    //need same name, dont have to be in same position
+
+
+    -variable-length arguments
+    *args: any number of positional arguments
+
+        def newMax(*args):
+            retrun max(args)
+            
+        print(newMax(2, 4)) #4
+
+        print(newMax(2, 4, 5)) #5
+
+        print(newMax(2, 4, 5, 3)) #5
+
+    -keyword-only arguments
+    **kwargs : any number of keyword arguments
+
+always have to put positional arguments first then keywords, then variable length, then keyword only.
+
+
+
+#functions annotations
+
+
+
 '''
