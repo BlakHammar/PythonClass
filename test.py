@@ -1,13 +1,20 @@
-arr = []
+# quiz on wednesday datatype 90p (47-115)
+#functions(1-27)
 
-for x in range(100,200):
-        if( x % 3 == 0 and x % 7 == 0):
-              arr.append("FooBar") 
-        elif(x % 3 == 0):
-            arr.append("Foo")
-        elif(x % 7 == 0):
-              arr.append("Bar")
+def charCount(string):
+    charDict = {}
+    for char in string:
+        if char in charDict:
+            charDict[char] += 1
         else:
-              arr.append(x)
+            charDict[char] = 1
+    
+    sortedDict = sorted(charDict.items(), key=lambda x: x[1], reverse=True)
 
-print(arr)
+    print(sortedDict)
+    return sortedDict[1][1]
+
+
+string = input("Enter a string: ")
+
+print(charCount(string))

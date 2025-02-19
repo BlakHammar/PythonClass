@@ -7,3 +7,4 @@ print(new)
 
 tuple2= (50, 10, 60, 70, 80, 50)
 
+print(tuple2.count(50))
