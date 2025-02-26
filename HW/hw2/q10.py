@@ -35,7 +35,7 @@ watchlist = []
 while True:
     menu()
     choice = input("Enter your choice(1-10): ")
-    print(" ")
+    print()
     
     if choice == "1":
         movie = input("Enter the movie name: ")

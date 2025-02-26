@@ -8,17 +8,21 @@ Lists and tuples:
         the size of an dataset.
 
         Tuple can be use when you dont want the data in 
-        the dataset to every change
+        the dataset to ever change
+            Better performance and mem efficent
 Lists and sets:
         List can be use when you need an ordered datatype, 
         able to interact through
 
         Sets can be used to remove duplicate data.
+        need to perform ops like union and intersection
+
 Lists and arrays
         List can be used when you need multiple datatypes.
 
         Arrays can be used to increase code performance 
         and memory efficiency
+        or working with large amount of data
 '''
 
 '''
